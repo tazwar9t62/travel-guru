@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const BookingForm = () => {
   return (
@@ -47,18 +48,20 @@ const BookingForm = () => {
             </div>
           </div>
         </Form.Group>
-
-        <Button
-          style={{
-            backgroundColor: "#F9A51A",
-            color: "black",
-            width: "100%",
-          }}
-          variant="primary"
-          type="submit"
-        >
-          Start Booking
-        </Button>
+        <Link to="/hotels">
+          <Button
+            style={{
+              backgroundColor: "#F9A51A",
+              color: "black",
+              width: "100%",
+              textDecoration: "none",
+            }}
+            variant="primary"
+            type="submit"
+          >
+            Start Booking
+          </Button>
+        </Link>
       </Form>
     </div>
   );
