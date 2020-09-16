@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Carousel } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 const SinglePlace = (props) => {
   console.log(props.place);

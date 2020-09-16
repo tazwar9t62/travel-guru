@@ -1,9 +1,15 @@
 import React from "react";
+import Header from "../Header/Header";
 
 const Error404 = () => {
   return (
     <div>
-      <h1>Error 404 , page not found</h1>
+      <Header />
+      <img
+        style={{ width: "100%" }}
+        src="https://static.dribbble.com/users/381530/screenshots/3949858/404.gif"
+        alt=""
+      />
     </div>
   );
 };

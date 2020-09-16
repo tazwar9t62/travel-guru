@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../Icon/Logo.png";
-import destinationData from "../../Data/DestinationData/destinations";
-import SinglePlace from "../Header/SinglePlace";
 
 const Header = () => {
-  let [places, setPlaces] = useState(destinationData);
-
   return (
     <>
       <Navbar bg="transparent" expand="lg">
@@ -50,9 +46,6 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      {places.map((place) => (
-        <SinglePlace place={place}></SinglePlace>
-      ))}
     </>
   );
 };
