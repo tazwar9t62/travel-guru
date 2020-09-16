@@ -16,15 +16,17 @@ const Header = () => {
         <img className="w-50" src={logo} alt="" />
       </Navbar.Brand>
 
-      <FormControl
-        type="text"
-        placeholder="Search your destination"
-        className="mr-sm-2 ml-0"
-      />
-
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+          <Form inline>
+            <FormControl
+              style={{ width: "600px" }}
+              type="text"
+              placeholder="Search your destination"
+              className="mr-sm-2 ml-auto"
+            />
+          </Form>
           <Nav.Link className="m-3" href="#">
             News
           </Nav.Link>
