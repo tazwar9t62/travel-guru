@@ -10,7 +10,7 @@ const SinglePlace = (props) => {
       className="col-md-3 col-sm-12 col-lg-3  pt-2"
     >
       {" "}
-      <Card style={{ width: "18rem" }}>
+      <Card bg="transpaprent" style={{ width: "18rem" }}>
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>

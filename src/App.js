@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import destionationData from "../src/Data/DestinationData/destinations";
-import SinglePlace from "./Components/Header/SinglePlace";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Error404 from "./Components/Error/Error404";
 
 function App() {
-  let [places, setPlaces] = useState(destionationData);
-  console.log(places);
   return (
     <div>
-      <Home />
-      {places.map((place) => (
-        <SinglePlace place={place}></SinglePlace>
-      ))}
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="*">
+            <Error404 />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
