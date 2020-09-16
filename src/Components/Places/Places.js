@@ -7,7 +7,7 @@ const Places = () => {
   return (
     <div>
       {places.map((place) => (
-        <SinglePlace place={place}></SinglePlace>
+        <SinglePlace place={place} key={place.id}></SinglePlace>
       ))}
     </div>
   );

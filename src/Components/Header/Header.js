@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <Navbar bg="transparent" expand="lg">
-        <Navbar.Brand className="ml-5" href="#home">
+        <Navbar.Brand className="ml-5" href="/">
           <img className="w-50 img-fluid" src={logo} alt="" />
         </Navbar.Brand>
 
@@ -21,16 +21,16 @@ const Header = () => {
                 className="mr-sm-2 ml-auto"
               />
             </Form>
-            <Nav.Link className="m-3" href="#">
+            <Nav.Link className="m-3" href="/">
               News
             </Nav.Link>
-            <Nav.Link className="m-3" href="#">
+            <Nav.Link className="m-3" href="/">
               Destination
             </Nav.Link>
-            <Nav.Link className="m-3" href="#">
+            <Nav.Link className="m-3" href="/">
               Blog
             </Nav.Link>
-            <Nav.Link className="m-3" href="#">
+            <Nav.Link className="m-3" href="/">
               Contact
             </Nav.Link>
             <Button
