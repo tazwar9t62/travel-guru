@@ -1,19 +1,12 @@
 import React from "react";
-import {
-  Button,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../Icon/Logo.png";
 
 const Header = () => {
   return (
     <Navbar bg="transparent" expand="lg">
       <Navbar.Brand className="ml-5" href="#home">
-        <img className="w-50" src={logo} alt="" />
+        <img className="w-50 img-fluid" src={logo} alt="" />
       </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
