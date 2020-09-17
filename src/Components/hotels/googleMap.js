@@ -9,13 +9,16 @@ class SimpleMap extends Component {
       lat: 21.4272,
       lng: 92.0058,
     },
-    zoom: 15,
+    zoom: 10,
   };
 
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "100vh", width: "100%" }}>
+      <div
+        style={{ height: "100vh", width: "100%" }}
+        className="rounded shadow m-3"
+      >
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBoHfGO_i8AUp21LF6xVU2AjYRez2WECXY" }}
           defaultCenter={this.props.center}

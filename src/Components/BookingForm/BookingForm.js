@@ -23,7 +23,11 @@ const BookingForm = () => {
         </Form.Group>
         <Form.Group>
           <Form.Label>Destination</Form.Label>
-          <select className="w-100 custom-select" id="inputGroupSelect03">
+          <select
+            className="w-100 custom-select"
+            id="inputGroupSelect03"
+            
+          >
             <option selected>Choose...</option>
             <option value="Cox'sBazar">Cox'sBazar</option>
             <option value="Sreemangal">Sreemangal</option>
