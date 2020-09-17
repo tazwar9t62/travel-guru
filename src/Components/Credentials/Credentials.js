@@ -64,6 +64,7 @@ export default function SignInForm() {
         event.target.value
       );
     }
+
     if (isFieldValid) {
       let newUserInfo = { ...user };
       newUserInfo[event.target.name] = event.target.value;
@@ -187,9 +188,9 @@ export default function SignInForm() {
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
+                  name="re-password"
                   type="password"
-                  label="Retype your password"
+                  label="Confirm your password"
                   id="userName"
                   autoComplete="current-username"
                 />
@@ -252,12 +253,14 @@ export default function SignInForm() {
               </Grid>
             </Grid>
           </form>
-          <Typography color="secondary" mt={2}>
-            {user.error}
-          </Typography>
-          {user.success && (
+
+          {user.success ? (
             <Typography color="primary" mt={2}>
               {newUser ? "Created" : "Signed In"} Successfully
+            </Typography>
+          ) : (
+            <Typography color="secondary" mt={2}>
+              {user.error}
             </Typography>
           )}
         </div>
