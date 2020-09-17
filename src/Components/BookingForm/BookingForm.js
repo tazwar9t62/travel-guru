@@ -56,7 +56,6 @@ const BookingForm = () => {
               width: "100%",
               textDecoration: "none",
             }}
-            variant="primary"
             type="submit"
           >
             Start Booking

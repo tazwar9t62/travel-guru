@@ -1,4 +1,6 @@
-.backGround {
-  background-image: url("https://i.ytimg.com/vi/YYgacUGQL1k/maxresdefault.jpg");
+.mainButton{
+  background-color: #F9A51A;
+  color: black;
   width: 100%;
+  text-decoration: none;
 }

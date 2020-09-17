@@ -5,7 +5,7 @@ import logo from "../../Icon/Logo.png";
 const Header = () => {
   return (
     <>
-      <Navbar bg="transparent" expand="lg">
+      <Navbar  bg="transparent" expand="lg">
         <Navbar.Brand className="ml-5" href="/">
           <img className="w-50 img-fluid" src={logo} alt="" />
         </Navbar.Brand>
