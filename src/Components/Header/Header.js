@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import { userContext } from "../../App";
 import logo from "../../Icon/Logo.png";
 
 const Header = () => {
+  let [loggedInUser, setLoggedInUser] = useContext(userContext);
+  let history = useHistory();
+  let handleSignIn = () => {
+    history.push(`/login`);
+  };
+
   return (
     <>
-      <Navbar  bg="transparent" expand="lg">
+      <Navbar bg="transparent" expand="lg">
         <Navbar.Brand className="ml-5" href="/">
           <img className="w-50 img-fluid" src={logo} alt="" />
         </Navbar.Brand>
@@ -33,16 +41,31 @@ const Header = () => {
             <Nav.Link className="m-3" href="/">
               Contact
             </Nav.Link>
-            <Button
-              className="m-3 mr-5"
-              style={{
-                backgroundColor: "#F9A51A",
-                width: "100px",
-                color: "black",
-              }}
-            >
-              Login
-            </Button>
+            {loggedInUser.email ? (
+              <Button
+                onClick={() => setLoggedInUser({})}
+                className="m-3 mr-5"
+                style={{
+                  backgroundColor: "#F9A51A",
+                  width: "100px",
+                  color: "black",
+                }}
+              >
+                Logout
+              </Button>
+            ) : (
+              <Button
+                onClick={() => handleSignIn()}
+                className="m-3 mr-5"
+                style={{
+                  backgroundColor: "#F9A51A",
+                  width: "100px",
+                  color: "black",
+                }}
+              >
+                Login
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -8,7 +8,7 @@ import { useHistory, useLocation } from "react-router-dom";
 firebase.initializeApp(firebaseConfig);
 
 function Login() {
-  let [loggesInUser, setLoggedInUser] = useContext(userContext);
+  let [loggedInUser, setLoggedInUser] = useContext(userContext);
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
