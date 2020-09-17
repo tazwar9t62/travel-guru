@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
-import destionationData from "../src/Data/DestinationData/destinations";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Error404 from "./Components/Error/Error404";
 import Booking from "./Components/booking/Booking";
 import Hotels from "./Components/hotels/Hotels";
 import Credentials from "./Components/Credentials/Credentials";
+export let userContext = createContext({});
 
 function App() {
+  let [loggedInUser, setLoggedInUser] = useState([]);
+
   return (
-    <div>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      {" "}
       <Router>
         <Switch>
           <Route path="/places/:name">
@@ -33,7 +36,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </userContext.Provider>
   );
 }
 
