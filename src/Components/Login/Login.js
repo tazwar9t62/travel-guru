@@ -19,7 +19,6 @@ function Login() {
   });
   let googleProvider = new firebase.auth.GoogleAuthProvider();
   let fbProvider = new firebase.auth.FacebookAuthProvider();
-  var githubProvider = new firebase.auth.GithubAuthProvider();
   let handleFbSignIn = () => {
     firebase
       .auth()
@@ -50,6 +49,7 @@ function Login() {
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        console.log(errorCode, errorMessage, email, credential);
         // ...
       });
   };
