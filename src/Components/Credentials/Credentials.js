@@ -137,118 +137,132 @@ export default function SignInForm() {
   };
 
   return (
-      <>
+    <>
       <Header></Header>
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        {newUser ? (
-          <Typography component="h1" variant="h5">
-            Sign Up
-          </Typography>
-        ) : (
-          <Typography component="h1" variant="h5">
-            Sign In
-          </Typography>
-        )}
-        <form className={classes.form}>
-          <TextField
-            onBlur={handleOnChange}
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Enter your Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            onBlur={handleOnChange}
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            type="password"
-            label="Type your password"
-            id="userName"
-            autoComplete="current-username"
-          />
-          {newUser && (
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          {newUser ? (
+            <Typography component="h1" variant="h5">
+              Sign Up
+            </Typography>
+          ) : (
+            <Typography component="h1" variant="h5">
+              Sign In
+            </Typography>
+          )}
+          <form className={classes.form}>
             <TextField
               onBlur={handleOnChange}
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              name="username"
-              label="Set Your username"
-              id="username"
+              id="email"
+              label="Enter your Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              onBlur={handleOnChange}
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              type="password"
+              label="Type your password"
+              id="userName"
               autoComplete="current-username"
             />
-          )}
+            {newUser && (
+              <>
+                <TextField
+                  onBlur={handleOnChange}
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  type="password"
+                  label="Retype your password"
+                  id="userName"
+                  autoComplete="current-username"
+                />
+                <TextField
+                  onBlur={handleOnChange}
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="username"
+                  label="Set Your username"
+                  id="username"
+                  autoComplete="current-username"
+                />
+              </>
+            )}
 
-          {newUser ? (
-            <Button
-              onClick={handleSubmit}
-              type="submit"
-              fullWidth
-              variant="contained"
-              style={{
-                backgroundColor: "#F9A51A",
-                color: "black",
-                width: "100%",
-                textDecoration: "none",
-              }}
-              className={classes.submit}
-            >
-              Sign Up
-            </Button>
-          ) : (
-            <Button
-              onClick={handleSubmit}
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign In
-            </Button>
-          )}
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
+            {newUser ? (
+              <Button
+                onClick={handleSubmit}
+                type="submit"
+                fullWidth
+                variant="contained"
+                style={{
+                  backgroundColor: "#F9A51A",
+                  color: "black",
+                  width: "100%",
+                  textDecoration: "none",
+                }}
+                className={classes.submit}
+              >
+                Sign Up
+              </Button>
+            ) : (
+              <Button
+                onClick={handleSubmit}
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                Sign In
+              </Button>
+            )}
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  Forgot password?
+                </Link>
+              </Grid>
+              <Grid item color="secondary">
+                <input
+                  type="checkbox"
+                  onChange={() => setNewUser(!newUser)}
+                  name="signUp"
+                  id="signUp"
+                />
+                <label htmlFor="signUp">New User?Sign Up! </label>
+              </Grid>
             </Grid>
-            <Grid item color="secondary">
-              <input
-                type="checkbox"
-                onChange={() => setNewUser(!newUser)}
-                name="signUp"
-                id="signUp"
-              />
-              <label htmlFor="signUp">New User?Sign Up! </label>
-            </Grid>
-          </Grid>
-        </form>
-        <Typography color="secondary" mt={2}>
-          {user.error}
-        </Typography>
-        {user.success && (
-          <Typography color="primary" mt={2}>
-            {newUser ? "Created" : "Signed In"} Successfully
+          </form>
+          <Typography color="secondary" mt={2}>
+            {user.error}
           </Typography>
-        )}
-      </div>
-      <Box mt={8}></Box>
-    </Container>
+          {user.success && (
+            <Typography color="primary" mt={2}>
+              {newUser ? "Created" : "Signed In"} Successfully
+            </Typography>
+          )}
+        </div>
+        <Box mt={8}></Box>
+      </Container>
     </>
   );
 }

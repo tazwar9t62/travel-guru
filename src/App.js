@@ -6,6 +6,8 @@ import Error404 from "./Components/Error/Error404";
 import Booking from "./Components/booking/Booking";
 import Hotels from "./Components/hotels/Hotels";
 import Credentials from "./Components/Credentials/Credentials";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Login from "./Components/Login/Login";
 export let userContext = createContext({});
 
 function App() {
@@ -19,9 +21,12 @@ function App() {
           <Route path="/places/:name">
             <Booking />
           </Route>
-          <Route path="/hotels">
-            <Hotels />
+          <Route path="/login">
+            <Login />
           </Route>
+          <PrivateRoute path="/hotels">
+            <Hotels />
+          </PrivateRoute>
           <Route path="/login">
             <Credentials />
           </Route>
