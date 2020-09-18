@@ -16,8 +16,8 @@ class SimpleMap extends Component {
     return (
       // Important! Always set the container height explicitly
       <div
-        style={{ height: "100vh", width: "100%" }}
-        className="rounded shadow m-3"
+        style={{ height: "80vh", width: "100%" }}
+        className="rounded shadow mr-3"
       >
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBoHfGO_i8AUp21LF6xVU2AjYRez2WECXY" }}

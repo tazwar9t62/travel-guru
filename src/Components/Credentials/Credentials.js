@@ -140,7 +140,11 @@ export default function SignInForm() {
   return (
     <>
       <Header></Header>
-      <Container component="main" maxWidth="xs">
+      <Container
+        style={{ border: "1px solid gray", borderRadius: "7px" }}
+        component="main"
+        maxWidth="xs"
+      >
         <CssBaseline />
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
@@ -191,8 +195,7 @@ export default function SignInForm() {
                   name="re-password"
                   type="password"
                   label="Confirm your password"
-                  id="userName"
-                  autoComplete="current-username"
+                  id="re-password"
                 />
                 <TextField
                   onBlur={handleOnChange}

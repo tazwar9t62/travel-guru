@@ -4,7 +4,9 @@ import "firebase/auth";
 import firebaseConfig from "./Firebase.config";
 import Credentials from "../Credentials/Credentials";
 import { userContext } from "../../App";
+import fbIcon from "../../Icon/fb.png";
 import { useHistory, useLocation } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
 firebase.initializeApp(firebaseConfig);
 
 function Login() {
@@ -111,10 +113,12 @@ function Login() {
         <button onClick={handleSignOut}>Sign out</button>
       ) : (
         <>
-          <button onClick={handleGoogleSignIn}>Sign in using Google</button>
-          <br />
-
-          <button onClick={handleFbSignIn}>Sign in using Facebook</button>
+          <button className="m-2 rounded shadow" onClick={handleGoogleSignIn}>
+            Continue With Google
+          </button>
+          <button className="m-2 rounded shadow" onClick={handleFbSignIn}>
+            Continue With Facebook
+          </button>
         </>
       )}
     </div>

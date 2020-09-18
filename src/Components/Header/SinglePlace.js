@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const SinglePlace = (props) => {
-  console.log(props.place);
-  let { id, name, description, img } = props.place;
+  let { name, description, img } = props.place;
   let history = useHistory();
   let handleDetails = (id) => {
     history.push(`places/${id}`);

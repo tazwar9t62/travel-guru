@@ -9,7 +9,7 @@ const BookingForm = () => {
         <Form.Group>
           <Form.Label>Origin</Form.Label>
           <select
-            required
+            required={true}
             style={{ width: "100%" }}
             className="custom-select"
             id="inputGroupSelect03"
@@ -25,7 +25,7 @@ const BookingForm = () => {
         <Form.Group>
           <Form.Label>Destination</Form.Label>
           <select
-            required
+            required={true}
             className="w-100 custom-select"
             id="inputGroupSelect03"
           >
@@ -45,11 +45,11 @@ const BookingForm = () => {
           <div className="d-flex justify-content-between">
             <div>
               <Form.Label>From</Form.Label>
-              <Form.Control type="date" required="true" />
+              <Form.Control type="date" required={true} />
             </div>
             <div>
               <Form.Label>To</Form.Label>
-              <Form.Control type="date" required="true" />
+              <Form.Control type="date" required={true} />
             </div>
           </div>
         </Form.Group>
