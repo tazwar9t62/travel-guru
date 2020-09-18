@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import BookingForm from "../BookingForm/BookingForm";
 import Header from "../Header/Header";
 import places from "../../Data/DestinationData/destinations";
+import SingleHotel from "../hotels/SingleHotel";
+import { userContext } from "../../App";
 
 const Booking = (props) => {
   let { name } = useParams();
+  const { SignedInUser, hotels } = React.useContext(userContext);
+  let [targetPlace, setTargetPlace] = hotels;
+
   // console.log(places, name);
   let destinationPlace = places.find((el) => el.name === name);
   let destinationHotels = destinationPlace.hotels;
   console.log(destinationHotels);
+  setTargetPlace(destinationHotels);
 
   const divStyle = {
     width: "100%",
@@ -31,6 +37,9 @@ const Booking = (props) => {
           <BookingForm></BookingForm>
         </div>
       </div>
+      {/* {destinationHotels.map((sh) => (
+        <SingleHotel sh={sh}></SingleHotel>
+      ))} */}
     </div>
   );
 };

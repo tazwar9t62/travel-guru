@@ -10,7 +10,8 @@ import { Avatar } from "@material-ui/core";
 firebase.initializeApp(firebaseConfig);
 
 function Login() {
-  let [loggedInUser, setLoggedInUser] = useContext(userContext);
+  const { SignedInUser, hotels } = React.useContext(userContext);
+  let [loggedInUser, setLoggedInUser] = SignedInUser;
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };

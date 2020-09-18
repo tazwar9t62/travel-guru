@@ -5,7 +5,8 @@ import { userContext } from "../../App";
 import logo from "../../Icon/Logo.png";
 
 const Header = () => {
-  let [loggedInUser, setLoggedInUser] = useContext(userContext);
+  const { SignedInUser, hotels } = React.useContext(userContext);
+  let [loggedInUser, setLoggedInUser] = SignedInUser;
   let history = useHistory();
   let handleSignIn = () => {
     history.push(`/login`);

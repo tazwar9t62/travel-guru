@@ -12,10 +12,15 @@ export let userContext = createContext({});
 
 function App() {
   let [loggedInUser, setLoggedInUser] = useState([]);
+  let [targetPlace, setTargetPlace] = useState([]);
 
   return (
-    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      {" "}
+    <userContext.Provider
+      value={{
+        SignedInUser: [loggedInUser, setLoggedInUser],
+        hotels: [targetPlace, setTargetPlace],
+      }}
+    >
       <Router>
         <Switch>
           <Route path="/places/:name">

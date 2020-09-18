@@ -47,8 +47,8 @@ export default function SignInForm() {
     error: "",
     success: false,
   });
-
-  let [loggesInUser, setLoggedInUser] = useContext(userContext);
+  const { SignedInUser, hotels } = React.useContext(userContext);
+  let [loggesInUser, setLoggedInUser] = SignedInUser;
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };

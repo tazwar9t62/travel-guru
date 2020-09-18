@@ -11,13 +11,12 @@ const SinglePlace = (props) => {
   return (
     <div
       style={{ float: "left" }}
-      className="col-md-3 col-sm-12 col-lg-3  pt-2"
+      className="col-md-3 col-sm-12 col-lg-3  pt-4 "
     >
       <Card style={{ width: "18rem", background: "transparent" }}>
-        <Card.Img variant="top" src={img} />
+        <Card.Img style={{ height: "300px" }} variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
 
           <Button
             style={{
