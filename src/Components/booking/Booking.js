@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import BookingForm from "../BookingForm/BookingForm";
 import Header from "../Header/Header";
 import places from "../../Data/DestinationData/destinations";
-import SingleHotel from "../hotels/SingleHotel";
 import { userContext } from "../../App";
 
 const Booking = (props) => {
@@ -37,9 +36,6 @@ const Booking = (props) => {
           <BookingForm></BookingForm>
         </div>
       </div>
-      {/* {destinationHotels.map((sh) => (
-        <SingleHotel sh={sh}></SingleHotel>
-      ))} */}
     </div>
   );
 };

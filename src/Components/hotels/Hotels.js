@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import SimpleMap from "./googleMap";
-import SingleHotel from "./SingleHotel";
+import AllHotels from "./AllHotels";
 
 const Hotels = () => {
   return (
@@ -9,7 +9,7 @@ const Hotels = () => {
       <Header></Header>
       <div className="row">
         <div className="col-md-6">
-          <SingleHotel />
+          <AllHotels />
         </div>
         <div className="col-md-6">
           <SimpleMap></SimpleMap>

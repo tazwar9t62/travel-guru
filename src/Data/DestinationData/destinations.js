@@ -2,6 +2,8 @@ const destinations = [
   {
     id: 1,
     name: "Cox'sbazar",
+    lat: 21.4272,
+    lng: 92.0058,
     description:
       "Coxs Bazar is a town on the southeast coast of Bangladesh. Its known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. ",
     img: "https://i.ytimg.com/vi/YYgacUGQL1k/maxresdefault.jpg",
