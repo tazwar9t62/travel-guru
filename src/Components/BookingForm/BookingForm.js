@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 const BookingForm = () => {
   return (
     <div>
-      <Form className="shadow p-2" style={{ margin: "20%" }}>
+      <Form
+        className="shadow p-2"
+        style={{ margin: "20%" }}
+        data-toggle="validator"
+        role="form"
+      >
         <Form.Group>
           <Form.Label>Origin</Form.Label>
           <select

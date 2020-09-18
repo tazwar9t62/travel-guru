@@ -10,10 +10,8 @@ const Booking = (props) => {
   const { SignedInUser, hotels } = React.useContext(userContext);
   let [targetPlace, setTargetPlace] = hotels;
 
-  // console.log(places, name);
   let destinationPlace = places.find((el) => el.name === name);
   let destinationHotels = destinationPlace.hotels;
-  console.log(destinationHotels);
   setTargetPlace(destinationHotels);
 
   const divStyle = {

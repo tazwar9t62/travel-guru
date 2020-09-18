@@ -47,7 +47,7 @@ export default function SignInForm() {
     error: "",
     success: false,
   });
-  const { SignedInUser, hotels } = React.useContext(userContext);
+  const { SignedInUser } = React.useContext(userContext);
   let [loggesInUser, setLoggedInUser] = SignedInUser;
   let history = useHistory();
   let location = useLocation();
@@ -170,6 +170,7 @@ export default function SignInForm() {
               label="Enter your Email Address"
               name="email"
               autoComplete="email"
+              value="test@travel-guru.com"
               autoFocus
             />
             <TextField
@@ -184,8 +185,13 @@ export default function SignInForm() {
               id="userName"
               autoComplete="current-username"
             />
+
             {newUser && (
               <>
+                <small style={{ color: "red" }}>
+                  password must contain alpha and numeric characters and min 8
+                  characters
+                </small>
                 <TextField
                   onBlur={handleOnChange}
                   variant="outlined"
@@ -197,6 +203,7 @@ export default function SignInForm() {
                   label="Confirm your password"
                   id="re-password"
                 />
+                <small style={{ color: "red" }}>Your password must match</small>
                 <TextField
                   onBlur={handleOnChange}
                   variant="outlined"
